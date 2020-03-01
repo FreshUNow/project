@@ -26,10 +26,8 @@
 			"SUBTITLE": "",
 			"TEXT": "<strong>Aurora</strong> is a web-based audience <strong>Planning Platform</strong> that utilizes industry-accepted data-sets to find and plan minute-by-minute advanced audiences across both Linear TV and digital campaigns.<br><br>We designed <strong>Aurora</strong> to find the precise characteristics at the household and program level, which not only uses established Nielsen, Claritas, and MVPD 3rd party-data but allows for 1st party audience data and on-ramps to planning on digital demand-side platforms.",
 			"IMAGES": {
-				"DEVICE": "aurora.png",
-				"PARALLAX":  "aurora.jpeg"
-			},
-			"DOCUMENT": "aurora.pdf"
+				"DEVICE": "aurora.png"
+			}
 		},
 		{
 			"LINK": "MEDIATOR",
@@ -37,10 +35,8 @@
 			"SUBTITLE": "",
 			"TEXT": "<strong>Mediator</strong> is a linear TV and digital video Advanced Audience Targeting and <strong>Buying Platform</strong>.<br><br>We constructed <strong>Mediator</strong> to marry all the industry-accepted advanced targeting data-sets, across the Linear TV universe, with customizable extensions, to create a buying environment for Intelligent Negotiations&trade; around TV and digital video inventory.",
 			"IMAGES": {
-				"DEVICE": "mediator.png",
-				"PARALLAX":  "mediator.jpeg"
-			},
-			"DOCUMENT": "mediator.pdf"
+				"DEVICE": "mediator.png"
+			}
 		},
 		{
 			"LINK": "BART",
@@ -48,10 +44,8 @@
 			"SUBTITLE": "Business Analysis Research Tool",
 			"TEXT": "<strong>BART</strong> is a linear TV and OTT / Digital <strong>Research Platform</strong>.<br><br>We built <strong>BART</strong> to create efficiencies and allow out team to focus on generating our truly most valuable asset: Insights about our audiences and viewership.",
 			"IMAGES": {
-				"DEVICE": "bart.png",
-				"PARALLAX":  "aurora.jpeg"
-			},
-			"DOCUMENT": "bart.pdf"
+				"DEVICE": "bart.png"
+			}
 		},
 		{
 			"LINK": "ESTIMATOR",
@@ -59,10 +53,8 @@
 			"SUBTITLE": "",
 			"TEXT": "<strong>Estimator</strong> is a linear TV software platform which helps TV companies make <strong>Intelligent and Accurate Estimates</strong> of all aspects of audience and viewership.<br><br>We created <strong>Estimator</strong> to radically modernize the way media companies forecast performance of shows, programs, and events for various departments – including Pricing & Inventory, Programming, Scheduling, Sales, Research and Finance.",
 			"IMAGES": {
-				"DEVICE": "estimator.png",
-				"PARALLAX":  "estimator.jpeg"
-			},
-			"DOCUMENT": "estimator.pdf"
+				"DEVICE": "estimator.png"
+			}
 		},
 		{
 			"LINK": "PAT",
@@ -70,10 +62,8 @@
 			"SUBTITLE": "Promo Allocations Tool",
 			"TEXT": "<strong>PAT</strong> is a quantitative research and planning tool to allow Linear TV media companies to <strong>Optimize Promotional and Barter Inventory</strong>.<br><br><strong>PAT</strong> solves the problem of targeting, valuation, efficiency of decision-making, and transparency, on an audience minute-by-minute, program level, so all departments in a media company – marketing, programming, promo, research and finance - can maximize the value of promotional TV inventory.",
 			"IMAGES": {
-				"DEVICE": "pat.png",
-				"PARALLAX":  "pat.jpeg"
-			},
-			"DOCUMENT": ""
+				"DEVICE": "pat.png"
+			}
 		},
 		{
 			"LINK": "SVOD",
@@ -81,10 +71,8 @@
 			"SUBTITLE": "Aurora Subscription Video On-Demand",
 			"TEXT": "<strong>Aurora SVOD</strong> is a comprehensive <strong>Business Analysis Dashboard</strong> which captures all the streaming and on-demand business metrics for a media owner into one comprehensive “source of truth”.<br><br><strong>Aurora SVOD</strong> is designed to cover every aspect of performance for a multi-platform video streaming and on-demand business, accounting for Churn, Acquisition, Retention, Engagement and Content performance. These metrics then translate into analyses that create actionable audience and behavioral segments, look-a-like modeling, and subscriber acquisition campaign management tools.",
 			"IMAGES": {
-				"DEVICE": "psvod.png",
-				"PARALLAX":  "psvod.jpeg"
-			},
-			"DOCUMENT": ""
+				"DEVICE": "psvod.png"
+			}
 		},
 		{
 			"LINK": "PPM",
@@ -92,10 +80,8 @@
 			"SUBTITLE": "Planning and Performance Marketing",
 			"TEXT": "<strong>PPM</strong> is a <strong>Performance Marketing Platform</strong> that measures all video performance across linear TV and digital, combining paid, promotional and organic channels.<br><br><strong>PPM</strong> is designed to improve the most important success factors for marketers running multiple creative video assets, across disparate and myriad channels, paid or organic, digital or linear. We combine the metrics, asset-by-asset, week-to-week, channel-by-channel into several high-impact visualization tools and equalize the value of each based on a sophisticated Enpressions&trade; calculations accounting for environment, recency, engagement and reach.",
 			"IMAGES": {
-				"DEVICE": "ppm.png",
-				"PARALLAX":  "ppm.jpeg"
-			},
-			"DOCUMENT": ""
+				"DEVICE": "ppm.png"
+			}
 		},
 		{
 			"LINK": "AURORA_VTS",
@@ -103,10 +89,8 @@
 			"SUBTITLE": "Video Targeting Solutions",
 			"TEXT": "This is our Flagship platform. Although our products have very many differences, they all currently operate off the AuroraVTS.com domain<br>(e.g. <a href=\"pat.auroravts.com\">pat.auroravts.com</a>).",
 			"IMAGES": {
-				"DEVICE": "login.png",
-				"PARALLAX": "mediator.jpeg"
-			},
-			"DOCUMENT": "aurora_vts.pdf"
+				"DEVICE": "login.png"
+			}
 		}
 	],
 	"ABOUT": {

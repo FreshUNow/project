@@ -1,19 +1,4 @@
 /* General for devices */
-#header_wrap,
-#footer_wrap {
-  display: none;
-}
-
-#main_content {
-  padding: 0 !important;
-}
-#main_content.inner {
-  position: static !important;
-  max-width: unset !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
 @media only screen and (max-device-width: 1024px) {
   home .content-container {
     padding: 2.5rem !important;
@@ -242,6 +227,22 @@ body a:hover {
 }
 body .responsive-carousel-item-container {
   display: none;
+}
+#header_wrap,
+#footer_wrap {
+  display: none;
+}
+#main_content {
+  padding: 0 !important;
+}
+#main_content.inner {
+  position: static !important;
+  max-width: unset !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+h2 {
+  background: unset;
 }
 
 /*# sourceMappingURL=styles.css.map*/
