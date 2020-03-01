@@ -1,4 +1,8 @@
 /* General for devices */
+header {
+  display: none;
+}
+
 @media only screen and (max-device-width: 1024px) {
   home .content-container {
     padding: 2.5rem !important;
