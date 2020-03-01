@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>2nd Party Media</title>
+  <title>Fresh U</title>
   <base href="./">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
