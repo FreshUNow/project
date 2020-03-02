@@ -41,7 +41,7 @@ module.exports = "<ng-container *ngIf=\"shouldDisplayPlaceholder; then placehold
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<article *ngIf=\"article\" [id]=\"article.LINK\" class=\"content-container\" [ngClass]=\"article.THEME\">\n\t<div class=\"content-container-inner\">\n\t\t<rounded-card [text]=\"article.TEXT\"></rounded-card>\n\t</div>\n</article>\n\n<div class=\"map-container\">\n\t<a class=\"map-link\" [href]=\"mapLink\" target=\"_blank\" rel=\"noopener noreferrer\">\n\t\t<img class=\"map-image\" src=\"assets/images/map.png\" alt=\"Our address\">\n\t\t<div class=\"map-cover\"></div>\n\t</a>\n</div>\n"
+module.exports = "<article class=\"content-container top-video-container\" style=\"visibility: hidden; position: absolute;\">\n\t<img #introVideo class=\"top-video-image\" src=\"assets/images/main.jpg\" alt=\"FreshU Main Image\"/>\n\n\t<div class=\"top-video-text-container\">\n\t\t<h2 class=\"article-text top-video-text\">Продажа моющих и дезинфицирующих средств от качественного производителя</h2>\n\t</div>\n</article>\n\n<article *ngIf=\"article\" [id]=\"article.LINK\" class=\"content-container\" [ngClass]=\"article.THEME\">\n\t<div class=\"content-container-inner\">\n\t\t<rounded-card [text]=\"article.TEXT\"></rounded-card>\n\t</div>\n</article>\n\n<div class=\"map-container\">\n\t<a class=\"map-link\" [href]=\"mapLink\" target=\"_blank\" rel=\"noopener noreferrer\">\n\t\t<img class=\"map-image\" src=\"assets/images/map.png\" alt=\"Our address\">\n\t\t<div class=\"map-cover\"></div>\n\t</a>\n</div>\n"
 
 /***/ }),
 
@@ -281,15 +281,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _shared_services_text_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shared/services/text-content.service */ "./src/app/shared/services/text-content.service.ts");
 /* harmony import */ var _shared_constants_contacts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shared/constants/contacts */ "./src/app/shared/constants/contacts.ts");
+/* harmony import */ var _shared_services_general_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shared/services/general.service */ "./src/app/shared/services/general.service.ts");
+
 
 
 
 
 let AboutComponent = class AboutComponent {
-    constructor(textContentService) {
+    constructor(textContentService, generalService, containerRef) {
+        this.generalService = generalService;
+        this.containerRef = containerRef;
         this.mapLink = _shared_constants_contacts__WEBPACK_IMPORTED_MODULE_3__["CONTACTS"].PHYSICAL_ADDRESS.REAL;
+        this.windowWidthUpdate = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.articleSubscription = textContentService.aboutArticle.subscribe((article) => {
             this.article = article;
+        });
+    }
+    ngAfterViewChecked() {
+        setTimeout(() => {
+            this.generalService.videoWidth.next(this.introVideo.nativeElement.clientWidth);
         });
     }
     ngOnDestroy() {
@@ -297,10 +307,22 @@ let AboutComponent = class AboutComponent {
             this.articleSubscription.unsubscribe();
         }
     }
+    onWindowWidthUpdate() {
+        this.generalService.videoWidth.next(this.introVideo.nativeElement.clientWidth);
+        this.windowWidthUpdate.emit(this.containerRef.element.nativeElement.clientWidth);
+    }
 };
 AboutComponent.ctorParameters = () => [
-    { type: _shared_services_text_content_service__WEBPACK_IMPORTED_MODULE_2__["TextContentService"] }
+    { type: _shared_services_text_content_service__WEBPACK_IMPORTED_MODULE_2__["TextContentService"] },
+    { type: _shared_services_general_service__WEBPACK_IMPORTED_MODULE_4__["GeneralService"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('introVideo', { static: false })
+], AboutComponent.prototype, "introVideo", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('window:resize')
+], AboutComponent.prototype, "articleSubscription", void 0);
 AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'about',
@@ -439,7 +461,9 @@ let HomeComponent = class HomeComponent {
         this.videoHeight = Object(_shared_helpers_sizes_helper__WEBPACK_IMPORTED_MODULE_4__["getResolutionForWidth"])(this.containerRef.element.nativeElement.clientWidth).height;
     }
     ngAfterViewChecked() {
-        this.generalService.videoWidth.next(this.introVideo.nativeElement.clientWidth);
+        setTimeout(() => {
+            this.generalService.videoWidth.next(this.introVideo.nativeElement.clientWidth);
+        });
     }
     ngOnDestroy() {
         if (this.articleNamesSubscription) {
